@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %} {% include
+"includes/form_errors.html" %}
+<div class="card-wrapper">
+  <div class="card">
+    <div class="container">
+      <form name="register" action="" method="POST">
+        <fieldset class="form-group">
+          <h1 class="center">{{title}}</h1>
+          {{ form.hidden_tag() }} {{ form.csrf_token }}
+          <p>
+            {{ form.username.label(class = 'label') }} {{ form.username(class =
+            'field') }}
+          </p>
+          <p>
+            {{ form.email.label(class = 'label') }} {{ form.email(class =
+            'field') }}
+          </p>
+
+          <p>
+            {{ form.password.label(class = 'label') }} {{ form.password(class =
+            'field') }}
+          </p>
+
+          <p>
+            {{ form.password_confirm.label(class = 'label') }} {{
+            form.password_confirm(class = 'field') }}
+          </p>
+
+          <p>
+            {{ form.full_name.label(class = 'label') }} {{ form.full_name(class
+            = 'field') }}
+          </p>
+          <p>
+            {{ form.number_n.label(class = 'label') }} {{ form.number_n(class =
+            'field') }}
+          </p>
+          <!-- <input type="button" value="{{title}}" class="btn" /> -->
+          {{ form.submit() }}
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="card-wrapper">
+  <div class="card">
+    <h1 class="center">Create an Account</h1>
+
+    <form name="signup_form">
+      <label for="name">Name</label>
+      <input type="text" name="name" class="field" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" class="field" required />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" class="field" required />
+
+      <p class="error error--hidden"></p>
+
+      <input type="submit" value="Sign Up" class="btn" />
+    </form>
+  </div>
+</div> -->
+
+{% endblock %}

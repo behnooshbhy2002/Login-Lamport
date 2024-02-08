@@ -1,0 +1,15 @@
+{% if form.email.errors %} {% for err in form.email.errors %}
+<p class="alert alert-danger">{{ err }}</p>
+{% endfor %} {% endif %} {% if form.username and form.username.errors %} {% for
+err in form.username.errors %}
+<p class="alert alert-danger">{{ err }}</p>
+{% endfor %} {% endif %} {% if form.password.errors %} {% for err in
+form.password.errors %}
+<p class="alert alert-danger">{{ err }}</p>
+{% endfor %} {% endif %} {% if form.password_confirm and
+form.password_confirm.errors %} {% for err in form.password_confirm.errors %}
+<p class="alert alert-danger">{{ err }}</p>
+{% endfor %} {% endif %} {% if form.full_name and form.full_name.errors %} {%
+for err in form.full_name.errors %}
+<p class="alert alert-danger">{{ err }}</p>
+{% endfor %} {% endif %}
